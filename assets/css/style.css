@@ -16,12 +16,12 @@ h1, h3 {
                  0 10px 10px rgba(0,0,0,.2),
                  0 20px 20px rgba(0,0,0,.15);
     text-align: center;
-    font-size: 80px;
+    font-size: 5vw;
     color: darkgreen;
 }
 
 h3 {
-    font-size: 40px;
+    font-size:2vw;
     margin-bottom: 20px;
 }
 
@@ -34,7 +34,7 @@ h3 {
     text-align: center;
 }
 
-.col-3 {
+.col-xs-3 {
     padding: 10px;
     border: 3px dotted darkgreen;
     text-align: center;
