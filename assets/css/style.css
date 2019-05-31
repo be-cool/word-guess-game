@@ -28,6 +28,12 @@ h3 {
 .banner-pics {
     text-align: center;
     margin-bottom: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.container {
+    margin 10px;
 }
 
 .row {
