@@ -43,25 +43,26 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col col-xs-3">
-                <img src="assets/images/hangman-style.png" alt="hangman">
+                <img id="pic" src="assets/images/hangman-style.png" alt="hangman">
             </div>
             <div class="col col-xs-3">
-                PRESS ANY KEY TO GET STARTED
+                <p>PRESS ANY KEY TO GET STARTED</p>
                 <br>
+                <p>WINS</p>
+                <p id="wins"></p>
                 <br>
-                WINS
+                <p>CURRENT WORD</p>
+                <p id="current-word"></p>
                 <br>
+                <p>NUMBER OF GUESSES REMAINING</p>
+                <p id="guesses-remaining"></p>
                 <br>
-                CURRENT WORD
-                <br>
-                <br>
-                NUMBER OF GUESSES REMAINING
-                <br>
-                <br>
-                LETTERS ALREADY GUESSED
+                <p>LETTERS ALREADY GUESSED</p>
+                <p id="already-guessed"></p>
             </div>
         </div>
     </div>
 
+<script src="assets/js/game.js"></script>
 </body>
 </html>
