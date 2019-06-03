@@ -2,11 +2,11 @@
 
 var words = [
     "HARPER",
-    "GIROUX",
-    "WENTZ",
+    // "GIROUX",
+    // "WENTZ",
     "EAGLES",
     "FLYERS",
-    "UNION",
+    // "UNION",
     "SIXERS",
     "PHILLIES",
     "EMBIID",
@@ -43,7 +43,7 @@ function updateDisplay() {
         currentWordText += currentWord[i];
     }
 
-// add the letters onto the page in the placeholder p-id tag.
+// need to get the letters onto the page in their placeholding p tags
     document.getElementById("current-word").innerText = currentWordText;
     document.getElementById("guesses-remaining").innerText = guessesRemaining;
     document.getElementById("already-guessed").innerText = currentLetters;
@@ -51,51 +51,46 @@ function updateDisplay() {
 };
 
 
-function checkGuess(letter) {
+function checkguess(letter) {
     var position = [];
-
-    // have to see if it is found multiple times in same word
     for (var i = 0; i < words[wordIndex].length; i++) {
         if(words[wordIndex][i] === letter) {
             position.push(i);
         }
     }
-
-    // if there are no indicies, remove a guess and update the hangman image
     if (position.length <= 0) {
         guessesRemaining--;
-    } else {
-        // Loop through all the indicies and replace the '_' with a letter.
+    } 
+    else {
         for(var i = 0; i < position.length; i++) {
             currentWord[position[i]] = letter;
         }
     }
 };
 
-// Checks for a win by seeing if there are any remaining underscores in the guessingword we are building.
-function checkWin() {
+// make a function to see if you win or lose
+function win() {
     if(currentWord.indexOf("-") === -1) {
         wins++;
         gameOver = true;
+        alert("You won! You must be a Philly fan!!")
+
     }
 };
 
-
-// Checks for a loss
-function checkLoss()
+function lose()
 {
     if(guessesRemaining <= 0) {
         gameOver = true;
     }
 }
 
-// Makes a guess
+
 function guess(letter) {
     if (guessesRemaining > 0) {
-        // Make sure we didn't use this letter yet
         if (currentLetters.indexOf(letter) === -1) {
             currentLetters.push(letter);
-            checkGuess(letter);
+            checkguess(letter);
         }
     }
     
@@ -110,8 +105,8 @@ document.onkeydown = function(event) {
         if(event.keyCode >= 65 && event.keyCode <= 90) {
             guess(event.key.toUpperCase());
             updateDisplay();
-            checkWin();
-            checkLoss();
+            win();
+            lose();
         }
     }
 };
