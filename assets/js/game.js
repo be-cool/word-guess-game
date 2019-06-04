@@ -10,12 +10,12 @@ var words = [
     "SIXERS",
     "PHILLIES",
     "EMBIID",
-    "GRITTY"
-    "SOUL"
-    "IVERSON"
-    "SCHMIDT"
-    "BURRELL"
-    "MCNABB"
+    "GRITTY",
+    "SOUL",
+    "IVERSON",
+    "SCHMIDT",
+    "BURRELL",
+    "MCNABB",
     "ROCKY"
 ]
 // define all variables needed
