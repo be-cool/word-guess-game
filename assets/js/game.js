@@ -19,7 +19,7 @@ var words = [
     "ROCKY"
 ]
 // define all variables needed
-const totalGuesses = 5;
+const totalGuesses = 7;
 var currentLetters = [];
 var currentWord = [];
 var wordIndex;
