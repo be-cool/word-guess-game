@@ -2,18 +2,24 @@
 
 var words = [
     "HARPER",
-    // "GIROUX",
-    // "WENTZ",
+    "GIROUX",
+    "WENTZ",
     "EAGLES",
     "FLYERS",
-    // "UNION",
+    "UNION",
     "SIXERS",
     "PHILLIES",
     "EMBIID",
     "GRITTY"
+    "SOUL"
+    "IVERSON"
+    "SCHMIDT"
+    "BURRELL"
+    "MCNABB"
+    "ROCKY"
 ]
 // define all variables needed
-const totalGuesses = 8;
+const totalGuesses = 5;
 var currentLetters = [];
 var currentWord = [];
 var wordIndex;
